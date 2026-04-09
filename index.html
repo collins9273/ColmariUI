@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ColmariAI – Structured Document Intelligence</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- LEFT PANEL -->
+  <aside class="panel left">
+    <h2>Uploads</h2>
+
+    <div class="dropzone">
+      <p>Drag & drop files</p>
+      <button>Browse Files</button>
+    </div>
+
+    <div class="uploads">
+      <div class="upload">invoice_123.pdf</div>
+      <div class="upload">contract_ABC.docx</div>
+      <div class="upload">policy_document.pdf</div>
+    </div>
+
+    <button class="start-btn" onclick="startProcessing()">Start Processing</button>
+  </aside>
+
+
+  <!-- CENTER ENGINE -->
+  <main class="panel center">
+
+    <h2>ColmariAI Processing Engine</h2>
+
+    <div class="scanner">
+      <div class="scan-line"></div>
+    </div>
+
+    <div class="ring" id="ring">
+      <span id="percent">0%</span>
+    </div>
+
+    <div class="steps">
+      <div id="step1">Extracting Data...</div>
+      <div id="step2">Classifying Document...</div>
+      <div id="step3">Validation Complete</div>
+    </div>
+
+  </main>
+
+
+  <!-- RIGHT PANEL -->
+  <aside class="panel right">
+
+    <h2>Document Folders</h2>
+
+    <div class="doc">
+      <div>
+        <strong>policy_document.pdf</strong><br>
+        AERIS SERVICES LIMITED<br>
+        Expiry: 26 Mar 2026
+      </div>
+      <span class="badge green">Verified</span>
+    </div>
+
+    <div class="doc">
+      <div>
+        <strong>billing_statement.pdf</strong><br>
+        Unknown Company<br>
+        Expiry: 12 Sep 2025
+      </div>
+      <span class="badge orange">Needs Review</span>
+    </div>
+
+  </aside>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

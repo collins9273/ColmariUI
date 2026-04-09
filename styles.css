@@ -1,0 +1,145 @@
+:root {
+  --bg:#050b12;
+  --panel:#0b1622;
+  --border:rgba(0,255,200,0.15);
+  --text:#d8f6ff;
+  --muted:#7fa6b3;
+  --teal:#00ffc6;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family:Segoe UI, Arial;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(0,255,200,0.08), transparent 30%),
+    linear-gradient(#04090f,#050b12);
+  color:var(--text);
+  height:100vh;
+}
+
+/* LAYOUT */
+.app {
+  display:grid;
+  grid-template-columns:1fr 1.4fr 1fr;
+  gap:20px;
+  padding:20px;
+  height:100%;
+}
+
+.panel {
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 0 40px rgba(0,255,200,0.08);
+}
+
+/* LEFT */
+.dropzone {
+  border:1px dashed rgba(255,255,255,0.2);
+  padding:20px;
+  text-align:center;
+  margin-bottom:20px;
+  border-radius:12px;
+}
+
+.upload {
+  margin:8px 0;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.start-btn {
+  margin-top:20px;
+  width:100%;
+}
+
+/* BUTTON */
+button {
+  padding:10px;
+  background:#122333;
+  border:1px solid var(--border);
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* CENTER */
+.center {
+  text-align:center;
+}
+
+.scanner {
+  width:80%;
+  height:160px;
+  margin:20px auto;
+  border-radius:12px;
+  background:linear-gradient(#1c2f3f,#0c1c28);
+  position:relative;
+  overflow:hidden;
+}
+
+.scan-line {
+  position:absolute;
+  width:100%;
+  height:3px;
+  background:var(--teal);
+  animation:scan 2s infinite;
+}
+
+@keyframes scan {
+  0% { top:0; }
+  100% { top:100%; }
+}
+
+/* RING */
+.ring {
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background:conic-gradient(var(--teal) 0%, #123 0%);
+  margin:20px auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.ring span {
+  font-size:28px;
+}
+
+/* STEPS */
+.steps div {
+  margin:8px 0;
+  color:var(--muted);
+}
+
+/* RIGHT */
+.doc {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  padding:12px;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:10px;
+}
+
+.badge {
+  padding:5px 10px;
+  border-radius:8px;
+  font-size:12px;
+}
+
+.green {
+  background:#1f8c5a;
+}
+
+.orange {
+  background:#b67a1e;
+}
